@@ -10,6 +10,7 @@ import Candidate from './pages/Candidate'
 import WinnerPage from './Components/WinnerSeperatePage/WinnerPage'
 import Logout from './pages/Logout/Logout'
 
+
 //navbar after login
 import NavbarAlogin from './Components/NavbarAlogin'
 import { useState, useEffect } from 'react';
@@ -49,7 +50,7 @@ function App() {
               { label: 'About', url: '/about' },
               { label: 'Contact', url: '/contact' },
             ]}
-            brandName={"College Voting Porta"}
+            brandName={"College Voting Portal"}
           />
 
           <Routes>

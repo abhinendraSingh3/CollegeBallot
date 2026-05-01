@@ -20,6 +20,7 @@ function Register() {
     const [error, setError] = useState(""); //for handling errors
     const [success, setSuccess] = useState("");
 
+
     function handleChange(e) {
         setError('');
         setSuccess('');
@@ -88,6 +89,12 @@ function Register() {
                     <input name="studentid" value={state.studentid} placeholder="studentid" onChange={handleChange} />
                     <input name="department" value={state.department} placeholder="Department" onChange={handleChange} />
                 </div>
+                <input
+                    type="file"
+                    name="image"
+                    accept="image/*"
+                    onChange={handleImage}
+                />
                 <input type="password" name="password" value={state.password} placeholder="Enter your password" onChange={handleChange}></input>
                 <input type="password" name="confirmPassword" value={state.confirmPassword} placeholder="Enter your confirm Password" onChange={handleChange}></input>
                 {error && <p className="error">{error}</p>}
