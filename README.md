@@ -44,7 +44,6 @@ Multer (file upload)
 
 📁 Project Structure
 CollegeBallot/
-│
 ├── frontend/
 │   ├── src/
 │   │   ├── Components/
@@ -52,7 +51,6 @@ CollegeBallot/
 │   │   ├── utils/
 │   │   ├── App.jsx
 │   │   └── api.js
-│
 ├── backend/
 │   ├── config/
 │   ├── controller/
