@@ -68,67 +68,102 @@ CollegeBallot/
 │   └── .env
 ```
 
-⚙️ Installation & Setup
+---
 
-1️⃣ Clone the Repository
+## ⚙️ **Installation & Setup**
+
+### 1️⃣ **Clone Repository**
+```bash
 git clone https://github.com/your-username/CollegeBallot.git
 cd CollegeBallot
+```
 
-2️⃣ Setup Backend
+---
+
+### 2️⃣ **Backend Setup**
+```bash
 cd backend
 npm install
+```
 
-Create a .env file:
+Create a `.env` file:
 
+```env
 PORT=5000
-MONGO_URI=your_mongodb_connection
+MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret_key
+```
 
 Run backend:
-
+```bash
 npm start
-3️⃣ Setup Frontend
+```
+
+---
+
+### 3️⃣ **Frontend Setup**
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
-🔌 API Endpoints (Sample)
-Auth
-POST /api/auth/register
-POST /api/auth/login
+---
 
-Voting
-GET /api/votes
-POST /api/vote
+## 🔌 **API Endpoints**
 
-Candidates
-GET /api/candidates
-POST /api/candidate
-📸 Screenshots (Optional)
+### 🔐 **Auth**
+- POST `/api/auth/register`
+- POST `/api/auth/login`
 
-Add your UI screenshots here
+### 🧑‍💼 **Candidates**
+- GET `/api/candidates`
+- POST `/api/candidate`
 
-🔒 Security Features
-JWT-based authentication
-Password hashing
-Rate limiter middleware
-One-user-one-vote restriction
+### 🗳️ **Voting**
+- POST `/api/vote`
+- GET `/api/results`
 
-📡 Real-Time Updates
-Uses Socket.IO to broadcast election results instantly
+---
 
-🧠 Future Improvements
-Email verification
-Admin dashboard UI
-Election scheduling
-Blockchain-based voting (advanced)
+## 🔒 **Security Features**
 
-🤝 Contributing
-Contributions are welcome!
-Feel free to fork the repo and submit a PR.
+- 🔐 JWT Authentication  
+- 🔑 Password Hashing  
+- ⚡ Rate Limiting  
+- 🗳️ One User → One Vote  
 
-📜 License
-This project is licensed under the MIT License.
+---
 
-👨‍💻 Author
-Abhinendra Singh
+## 📡 **Real-Time Updates**
+
+- 📊 Live voting results using **Socket.IO**
+
+---
+
+## 🧠 **Future Improvements**
+
+- ✉️ Email verification  
+- 🧑‍💻 Admin dashboard UI  
+- 📅 Election scheduling  
+- 📱 Mobile responsiveness  
+
+---
+
+## 🤝 **Contributing**
+
+Contributions are welcome!  
+Feel free to fork this repository and submit a pull request.
+
+---
+
+## 📜 **License**
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 **Author**
+
+**Your Name**  
+GitHub: https://github.com/your-username
