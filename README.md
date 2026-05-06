@@ -1,49 +1,54 @@
-#🗳️ CollegeBallot
+# 🗳️ **CollegeBallot**
+## 🚀 **A Full Stack Online Voting System for Colleges**
 
-A Full Stack Online Voting System for Colleges
+---
 
-📌 Overview
+## 📌 **Overview**
+**CollegeBallot** is a full-stack web application that allows students to securely participate in college elections.  
+It ensures fair voting with authentication, one-user-one-vote logic, and real-time result updates.
 
-CollegeBallot is a full-stack web application that allows students to securely vote in college elections. It provides an easy-to-use interface for voters and an efficient backend system to manage candidates, votes, and results in real time.
+---
 
-🚀 Features
-🔐 Authentication & Authorization
-Secure login/register system
-Role-based access (Admin / Student)
+## ✨ **Features**
 
-🧑‍🎓 Student Panel
-Register with details + profile image
-View candidates
-Cast vote (one vote per user)
+- 🔐 **Authentication & Authorization**
+  - Secure login & registration
+  - Role-based access (Admin / Student)
 
-🧑‍💼 Admin Features
-Manage candidates
-Monitor voting process
-View results
+- 🧑‍🎓 **Student Panel**
+  - Register with details + profile image
+  - View candidates
+  - Cast vote (**one vote per user**)
 
-📊 Real-time Results
-Socket-based live updates
+- 🧑‍💼 **Admin Panel**
+  - Manage candidates
+  - Monitor voting process
+  - View results
 
-⚡ Rate Limiting
-Prevent spam voting using middleware
+- 📊 **Real-Time Results**
+  - Live updates using **Socket.IO**
 
-🛠️ Tech Stack
-Frontend
-React.js
-CSS
-Axios
-Backend
-Node.js
-Express.js
-Database
-MongoDB
-Other Tools
-Socket.IO (real-time updates)
-JWT (authentication)
-Multer (file upload)
+- ⚡ **Security**
+  - Rate limiting
+  - Protected routes
+  - Password hashing
 
-📁 Project Structure
+---
+
+## 🛠️ **Tech Stack**
+
+**Frontend:** React.js, CSS, Axios  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB  
+**Other Tools:** JWT, Socket.IO, Multer  
+
+---
+
+## 📁 **Project Structure**
+
+```bash
 CollegeBallot/
+│
 ├── frontend/
 │   ├── src/
 │   │   ├── Components/
@@ -51,6 +56,7 @@ CollegeBallot/
 │   │   ├── utils/
 │   │   ├── App.jsx
 │   │   └── api.js
+│
 ├── backend/
 │   ├── config/
 │   ├── controller/
@@ -60,6 +66,7 @@ CollegeBallot/
 │   ├── socket/
 │   ├── server.js
 │   └── .env
+```
 
 ⚙️ Installation & Setup
 
