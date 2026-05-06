@@ -1,4 +1,4 @@
-🗳️ CollegeBallot
+**🗳️ CollegeBallot**
 
 A Full Stack Online Voting System for Colleges
 
