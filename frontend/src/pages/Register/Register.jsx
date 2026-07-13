@@ -3,6 +3,7 @@ import './Register.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import api from '../../utils/axiosInterceptor';
 
 function Register() {
 
@@ -45,7 +46,7 @@ function Register() {
 
             setError("");
             
-            const res=await axios.post("http://localhost:5000/student/signup",state);
+            const res=await api.post("/student/signup",state);
 
             console.log(res.data);
 
@@ -89,12 +90,12 @@ function Register() {
                     <input name="studentid" value={state.studentid} placeholder="studentid" onChange={handleChange} />
                     <input name="department" value={state.department} placeholder="Department" onChange={handleChange} />
                 </div>
-                <input
+                {/* <input
                     type="file"
                     name="image"
                     accept="image/*"
                     onChange={handleImage}
-                />
+                /> */}
                 <input type="password" name="password" value={state.password} placeholder="Enter your password" onChange={handleChange}></input>
                 <input type="password" name="confirmPassword" value={state.confirmPassword} placeholder="Enter your confirm Password" onChange={handleChange}></input>
                 {error && <p className="error">{error}</p>}
