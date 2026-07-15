@@ -1,6 +1,6 @@
 # Contributing to CodeSnippetVault
 
-First off, thank you for considering contributing to CodeSnippetVault! 🎉
+First off, thank you for considering contributing to CollegeBallot! 🎉
 
 We welcome contributions of all kinds, including bug fixes, new features, documentation improvements, and UI enhancements.
 
