@@ -1,169 +1,324 @@
-# 🗳️ **CollegeBallot**
-## 🚀 **A Full Stack Online Voting System for Colleges**
+# 🗳️ Campus Voting System
+
+A secure and modern **Online Campus Voting System** that enables students to vote digitally while providing administrators with tools to manage candidates, elections, and results. The application uses JWT authentication, role-based authorization, and real-time election management.
 
 ---
 
-## 📌 **Overview**
-**CollegeBallot** is a full-stack web application that allows students to securely participate in college elections.  
-It ensures fair voting with authentication, one-user-one-vote logic, and real-time result updates.
+## 🚀 Features
+
+### 👨‍🎓 Student
+- Register and Login
+- Secure JWT Authentication
+- View Profile
+- Change Password
+- Cast Vote
+- View Voting Status
+- View Voting Events
+- Check Whether Already Voted
+- View Election Results
+- View Winner
+
+### 👨‍💼 Admin
+- Create Candidates
+- Manage Elections
+- View Election Results
+- Manage Voting Events
+- Secure Role-Based Access
+
+### 🔒 Security
+- JWT Authentication
+- Password Hashing
+- Rate Limiting
+- Role-Based Access Control (RBAC)
+- Protected Routes
 
 ---
 
-## ✨ **Features**
+# 🛠️ Tech Stack
 
-- 🔐 **Authentication & Authorization**
-  - Secure login & registration
-  - Role-based access (Admin / Student)
+## Frontend
 
-- 🧑‍🎓 **Student Panel**
-  - Register with details + profile image
-  - View candidates
-  - Cast vote (**one vote per user**)
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Axios
+- React Router
 
-- 🧑‍💼 **Admin Panel**
-  - Manage candidates
-  - Monitor voting process
-  - View results
+## Backend
 
-- 📊 **Real-Time Results**
-  - Live updates using **Socket.IO**
-
-- ⚡ **Security**
-  - Rate limiting
-  - Protected routes
-  - Password hashing
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- Bcrypt
+- Express Rate Limiter
 
 ---
 
-## 🛠️ **Tech Stack**
+# 📂 Project Structure
 
-**Frontend:** React.js, CSS, Axios  
-**Backend:** Node.js, Express.js  
-**Database:** MongoDB  
-**Other Tools:** JWT, Socket.IO, Multer  
-
----
-
-## 📁 **Project Structure**
-
-```bash
-CollegeBallot/
+```
+Campus-Voting-System
 │
-├── frontend/
-│   ├── src/
-│   │   ├── Components/
-│   │   ├── pages/
-│   │   ├── utils/
+├── frontend
+│   ├── src
+│   │   ├── assets
+│   │   ├── Components
+│   │   ├── pages
 │   │   ├── App.jsx
-│   │   └── api.js
+│   │   └── main.jsx
+│   └── package.json
 │
-├── backend/
-│   ├── config/
-│   ├── controller/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── socket/
+├── backend
+│   ├── config
+│   ├── controller
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── socket
 │   ├── server.js
-│   └── .env
+│   └── package.json
+│
+└── README.md
 ```
 
 ---
 
-## ⚙️ **Installation & Setup**
+# ⚙️ Installation
 
-### 1️⃣ **Clone Repository**
+## Clone Repository
+
 ```bash
-git clone https://github.com/your-username/CollegeBallot.git
-cd CollegeBallot
+git clone https://github.com/yourusername/campus-voting-system.git
+```
+
+```bash
+cd campus-voting-system
 ```
 
 ---
 
-### 2️⃣ **Backend Setup**
+## Backend Setup
+
 ```bash
 cd backend
+```
+
+Install dependencies
+
+```bash
 npm install
 ```
 
-Create a `.env` file:
+Create a `.env`
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_uri
+
+MONGODB_URI=your_mongodb_connection
+
 JWT_SECRET=your_secret_key
+
+JWT_REFRESH_SECRET=your_refresh_secret
 ```
 
-Run backend:
+Run server
+
 ```bash
 npm start
 ```
 
----
+or
 
-### 3️⃣ **Frontend Setup**
 ```bash
-cd frontend
-npm install
 npm run dev
 ```
 
 ---
 
-## 🔌 **API Endpoints**
+## Frontend Setup
 
-### 🔐 **Auth**
-- POST `/api/auth/register`
-- POST `/api/auth/login`
+```bash
+cd frontend
+```
 
-### 🧑‍💼 **Candidates**
-- GET `/api/candidates`
-- POST `/api/candidate`
+Install dependencies
 
-### 🗳️ **Voting**
-- POST `/api/vote`
-- GET `/api/results`
+```bash
+npm install
+```
 
----
+Run
 
-## 🔒 **Security Features**
-
-- 🔐 JWT Authentication  
-- 🔑 Password Hashing  
-- ⚡ Rate Limiting  
-- 🗳️ One User → One Vote  
+```bash
+npm run dev
+```
 
 ---
 
-## 📡 **Real-Time Updates**
+# 🔗 API Endpoints
 
-- 📊 Live voting results using **Socket.IO**
+## Authentication
 
----
-
-## 🧠 **Future Improvements**
-
-- ✉️ Email verification  
-- 🧑‍💻 Admin dashboard UI  
-- 📅 Election scheduling  
-- 📱 Mobile responsiveness  
-
----
-
-## 🤝 **Contributing**
-
-Contributions are welcome!  
-Feel free to fork this repository and submit a pull request.
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/student/signup` | Register Student |
+| POST | `/student/login` | Login |
+| POST | `/student/refreshtoken` | Refresh JWT |
+| GET | `/student/profile` | Student Profile |
+| PUT | `/student/profile/password` | Change Password |
 
 ---
 
-## 📜 **License**
+## Voting
 
-This project is licensed under the **MIT License**.
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/vote/casteVote` | Cast Vote |
+| GET | `/vote/myvotes` | Voting Status |
+| GET | `/vote/voteevents` | View Voting Events |
+| GET | `/vote/checkvote` | Check Vote |
+| GET | `/vote/viewResult` | Election Result |
+| GET | `/vote/winner` | Winner |
 
 ---
 
-## 👨‍💻 **Author**
+## Candidate
 
-**Abhinendra Singh**  
+| Base URL |
+|----------|
+| `/candidate` |
 
+Candidate CRUD endpoints are available under this route.
+
+---
+
+## Voting Events
+
+| Base URL |
+|----------|
+| `/votingEvents` |
+
+---
+
+## Result
+
+| Base URL |
+|----------|
+| `/result` |
+
+---
+
+# 🔐 Authentication
+
+Protected APIs require a JWT token.
+
+Example
+
+```http
+Authorization: Bearer <your_token>
+```
+
+---
+
+# 🗃️ Database Schema
+
+### Student
+
+```text
+name
+email
+studentId
+department
+password
+role
+```
+
+### Candidate
+
+```text
+candidateName
+department
+position
+votes
+```
+
+### Vote
+
+```text
+studentId
+candidateId
+timestamp
+```
+
+### Election
+
+```text
+title
+startDate
+endDate
+status
+```
+
+---
+
+# 📈 Future Improvements
+
+- Email Verification
+- Forgot Password
+- OTP Authentication
+- Live Vote Count
+- Admin Dashboard Analytics
+- Unit Testing
+- CI/CD Pipeline
+- Audit Logs
+- Election Scheduling
+- Develop Profile Section
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push branch
+
+```bash
+git push origin feature/your-feature
+```
+
+5. Open a Pull Request
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub.
+
+---
+
+# 👨‍💻 Author
+
+**Abhinendra Singh**
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
