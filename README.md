@@ -91,7 +91,7 @@ Campus-Voting-System
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/campus-voting-system.git
+git clone https://github.com/abhinendraSingh3/campus-voting-system.git
 ```
 
 ```bash
