@@ -305,6 +305,8 @@ git push origin feature/your-feature
 
 5. Open a Pull Request
 
+Please read the CONTRIBUTING.md file before making a contribution.
+
 ---
 
 # ⭐ Support
