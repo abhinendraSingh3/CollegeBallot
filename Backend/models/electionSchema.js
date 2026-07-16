@@ -1,6 +1,6 @@
 //this schema defines the title of the event happening,the start time and the end time and is voting active?
-const mongoose=require('mongoose')
-const { schema } = require('./candidate')
+import mongoose from "mongoose";
+import candidateSch from "./candidate.js";
 
 const electionSchema=new mongoose.Schema({
 
@@ -33,4 +33,5 @@ const electionSchema=new mongoose.Schema({
 // 10:30:00    → time
 // Z           → UTC timezone
 
-module.exports=mongoose.model('electionSch',electionSchema)
+export default mongoose.model('electionSch',electionSchema)
+;

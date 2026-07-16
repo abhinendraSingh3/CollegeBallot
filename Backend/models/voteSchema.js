@@ -1,4 +1,4 @@
-const mongoose=require('mongoose')
+import mongoose from "mongoose";
 
 const voteSchema=new mongoose.Schema({
 
@@ -35,4 +35,4 @@ const voteSchema=new mongoose.Schema({
     voteSchema.index({voter:1,election:1},{unique:true})
 
 
-module.exports=mongoose.model('voteSch',voteSchema);
+export default mongoose.model('voteSch',voteSchema);

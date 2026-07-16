@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 //define user schema
 const studentSchema = new mongoose.Schema({
@@ -52,4 +52,4 @@ const studentSchema = new mongoose.Schema({
 //export
 //👉 Schemas define rules
 //👉Model interact with the database
-module.exports = mongoose.model('studentSch', studentSchema);
+export default mongoose.model('studentSch', studentSchema);

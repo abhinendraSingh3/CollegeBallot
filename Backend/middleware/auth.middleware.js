@@ -1,5 +1,5 @@
 // server once log in user and then other req is made then it forgets everything and so in order to not again and again verify things with db it uses authmiddle to check the valid token
-const jwt=require('jsonwebtoken');
+import jwt from "jsonwebtoken";
 
 const jwtAuthMiddleware=(req,res,next)=>{
     
@@ -32,4 +32,4 @@ const jwtAuthMiddleware=(req,res,next)=>{
     }
 };
 
-module.exports=jwtAuthMiddleware;
+export default jwtAuthMiddleware;

@@ -1,9 +1,9 @@
-const express = require('express');
+import express from "express";
 const router = express.Router();
-const jwtAuthMiddleware = require('./../middleware/auth.middleware');
-const jwt = require('jsonwebtoken')
-const {registerUser,loginUser,profileView,passChange,handleRefreshToken}=require('../controller/auth.controller')
-const {loginLimiter,registerLimiter}=require('../middleware/rateLimiter')
+import jwtAuthMiddleware from "./../middleware/auth.middleware.js";
+import jwt from "jsonwebtoken";
+import { registerUser,loginUser,profileView,passChange,handleRefreshToken } from "../controller/auth.controller.js";
+import { loginLimiter,registerLimiter } from "../middleware/rateLimiter.js";
 
 //----post method to add login credentials-----
 
@@ -22,4 +22,4 @@ router.put('/profile/password', jwtAuthMiddleware,passChange)
 router.post('/refreshtoken',handleRefreshToken)
 
 
-module.exports = router;
+export default router;

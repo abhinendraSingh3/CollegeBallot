@@ -1,5 +1,6 @@
-    const mongoose= require('mongoose');
-    require("dotenv").config();
+    import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 
    
@@ -31,4 +32,4 @@
     //final step
     //export this file to database server
 
-    module.exports=db;
+    export default db;

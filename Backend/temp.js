@@ -1,11 +1,11 @@
-const express=require('express');
+import express from "express";
 const app=express();
 //1
-const http=require('http');
+import http from "http";
 //2
-const socketIot=require('socket.io')
+import socketIot from "socket.io";
 //3
-const socketHandler=require('./socket/socketHandler');
+import socketHandler from "./socket/socketHandler.js";
 
 //1
 const server=http.createServer(app)

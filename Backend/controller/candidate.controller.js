@@ -1,8 +1,8 @@
-const express = require('express');
-const candidateSch = require('./../models/candidate')
+import express from "express";
+import candidateSch from "./../models/candidate.js";
 const router = express.Router();
-const jwtAuthMiddleware = require('./../middleware/auth.middleware')
-const userSchema = require('./../models/studentSchema')
+import jwtAuthMiddleware from "./../middleware/auth.middleware.js";
+import userSchema from "./../models/studentSchema.js";
 
 // getAllCandidates()->list all candidates
 const candidateView = async (req, res) => {
@@ -156,4 +156,4 @@ const voteCount = async (req, res) => {
     }
 
 }
-module.exports = { voteCount, candidateView };  
+export {  voteCount, candidateView  };  
