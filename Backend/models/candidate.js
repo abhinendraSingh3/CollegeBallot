@@ -1,5 +1,5 @@
-const mongoose= require('mongoose');
-const electionSch=require('./electionSchema')
+import mongoose from "mongoose";
+import electionSch from "./electionSchema.js";
 
 // define candidate Schema
 const candidateSchema=new mongoose.Schema({
@@ -59,4 +59,4 @@ voteCount:{
 
 });
 
-module.exports=mongoose.model('candidateSch',candidateSchema)
+export default mongoose.model('candidateSch',candidateSchema);

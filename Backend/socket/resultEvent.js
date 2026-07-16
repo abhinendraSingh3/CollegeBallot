@@ -1,5 +1,5 @@
-const candidateModel=require('./../models/candidate');
-const studentSch=require('./../models/studentSchema');
+import candidateModel from "./../models/candidate.js";
+import studentSch from "./../models/studentSchema.js";
 
 function resultEvent(socket,io){
     //io.emit means broadcast to each person
@@ -45,4 +45,4 @@ function resultEvent(socket,io){
     }
     })
 }
-module.exports=resultEvent
+export default resultEvent;

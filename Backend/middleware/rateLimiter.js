@@ -1,4 +1,4 @@
-const rateLimiter=require('express-rate-limit')
+import rateLimiter from "express-rate-limit";
 
 //globalLimiter
 const globalLimiter=rateLimiter({
@@ -40,5 +40,5 @@ const createCandidtaLimiter=rateLimiter({
     keyGenerator:(req)=>{return req.data.userId}//we are using custom rate limiting identification as userId which comes from auth
 
 })
-module.exports={createCandidtaLimiter,voteSubmitlimiter,registerLimiter,loginLimiter,globalLimiter}
+export { createCandidtaLimiter,voteSubmitlimiter,registerLimiter,loginLimiter,globalLimiter };
 

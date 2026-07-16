@@ -16,4 +16,4 @@ const authorizedRole=(role)=>{
 }
 
 }
-module.exports=authorizedRole;
+export default authorizedRole;

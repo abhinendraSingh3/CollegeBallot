@@ -1,10 +1,11 @@
-const express = require('express');
-const studentSch = require('./../models/studentSchema')
-const bcrypt = require('bcrypt');
-require('dotenv').config();
-const jwtAuthMiddleware = require('../middleware/auth.middleware');
-const bodyParser = require('body-parser');
-const jwt = require('jsonwebtoken')
+import express from "express";
+import studentSch from "./../models/studentSchema.js";
+import bcrypt from "bcrypt";
+import dotenv from "dotenv";
+dotenv.config();
+import jwtAuthMiddleware from "../middleware/auth.middleware.js";
+import bodyParser from "body-parser";
+import jwt from "jsonwebtoken";
 
 const registerUser = async (req, res) => {
     try {
@@ -238,6 +239,6 @@ const passChange = async (req, res) => {
     }
 }
 
-module.exports = { registerUser, profileView, loginUser ,handleRefreshToken,passChange};
+export {  registerUser, profileView, loginUser ,handleRefreshToken,passChange };
 
 

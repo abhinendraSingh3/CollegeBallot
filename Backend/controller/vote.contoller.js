@@ -1,9 +1,9 @@
 
-const candidateSch = require('./../models/candidate')
-const studentSchema = require('./../models/studentSchema');
-const student = require('./../models/studentSchema');
-const elections = require('../models/electionSchema')
-const voteSch = require('../models/voteSchema');
+import candidateSch from "./../models/candidate.js";
+import studentSchema from "./../models/studentSchema.js";
+import student from "./../models/studentSchema.js";
+import elections from "../models/electionSchema.js";
+import voteSch from "../models/voteSchema.js";
 
 // castVote()       // student casts vote (checks isVoted first)
 // getResults()     // get full results/leaderboard
@@ -291,6 +291,6 @@ const castevote = async (req, res) => {
 //     }
 // }
 
-module.exports = { castevote, voteStatus, voteevents, checkVote, voteResult,winner }
+export {  castevote, voteStatus, voteevents, checkVote, voteResult,winner  };
 
 

@@ -1,9 +1,9 @@
-const express=require('express')
+import express from "express";
 const router=express.Router();
-const jwtAuthMiddleware = require('./../middleware/auth.middleware')
-const authorizedRole=require('./../middleware/rbac.middleware')
-const {voteStatus,castevote,winner,eventCreate,voteevents,checkVote,voteResult}=require('./../controller/vote.contoller');
-const {voteSubmitlimiter}=require('./../middleware/rateLimiter')
+import jwtAuthMiddleware from "./../middleware/auth.middleware.js";
+import authorizedRole from "./../middleware/rbac.middleware.js";
+import { voteStatus, castevote, winner, voteevents, checkVote, voteResult } from "./../controller/vote.contoller.js";
+import { voteSubmitlimiter } from "./../middleware/rateLimiter.js";
 
 
 //---------------------voting------------------------------------------
@@ -31,6 +31,6 @@ router.get('/winner',jwtAuthMiddleware,winner)
 
 
 
-module.exports=router;
+export default router;
 
 

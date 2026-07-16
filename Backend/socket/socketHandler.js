@@ -1,5 +1,5 @@
 // This file handles when a user connects and disconnects from your app
-const resultEvents=require('./resultEvent');
+import resultEvents from "./resultEvent.js";
 
 
 function socketHandler(io){
@@ -22,4 +22,4 @@ catch(error){
 }
 }
 
-module.exports=socketHandler;
+export default socketHandler;

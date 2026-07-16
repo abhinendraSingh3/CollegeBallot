@@ -1,9 +1,9 @@
-const express = require('express');
+import express from "express";
 const router = express.Router();
-const jwtAuthMiddleware = require('./../middleware/auth.middleware')
+import jwtAuthMiddleware from "./../middleware/auth.middleware.js";
 
-const {voteCount,deleteCandidate,updateCandidate,addCandidate,singleCandidate,candidateView} =require('./../controller/candidate.controller');
-const{createCandidtaLimiter}=require('./../middleware/rateLimiter')
+import { voteCount, candidateView } from "./../controller/candidate.controller.js";
+import { createCandidtaLimiter } from "./../middleware/rateLimiter.js";
 
 
 //add new candidat
@@ -24,4 +24,4 @@ const{createCandidtaLimiter}=require('./../middleware/rateLimiter')
 router.get('/allcandidates/:electionId',jwtAuthMiddleware,candidateView);
 
 
-module.exports = router
+export default router;
