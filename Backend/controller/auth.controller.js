@@ -6,8 +6,17 @@ const jwtAuthMiddleware = require('../middleware/auth.middleware');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken')
 
+const { registerSchema, loginSchema} = require("../validations/auth.validation");
+
 const registerUser = async (req, res) => {
     try {
+        const validationResult = registerSchema.safeParse(req.body);
+        if (!validationResult.success) {
+            return res.status(400).json({
+                success: false,
+                message: validationResult.error.issues[0].message,
+            });
+        }
 
         const { name, email, studentid, department, password } = req.body;// assuming the requestbody contains the user data
         console.log(name, email, studentid, department, password)
@@ -76,6 +85,13 @@ const registerUser = async (req, res) => {
 //-----login route---------
 const loginUser = async (req, res) => {  
     try {
+        const validationResult = loginSchema.safeParse(req.body);
+        if (!validationResult.success) {
+            return res.status(400).json({
+                success: false,
+                message: validationResult.error.issues[0].message,
+            });
+        }
 
         const { email, password } = req.body;
         
