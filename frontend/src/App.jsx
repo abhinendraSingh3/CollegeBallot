@@ -9,6 +9,7 @@ import Results from './pages/Results'
 import Candidate from './pages/Candidate'
 import WinnerPage from './Components/WinnerSeperatePage/WinnerPage'
 import Logout from './pages/Logout/Logout'
+import Profile from "./pages/profile/profile";
 
 
 //navbar after login
@@ -78,6 +79,7 @@ function App() {
             {/* Think of it like a map that says: "When URL is X, show Y component" */}
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path='/register' element={<Register />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/votingevents' element={<Events />} />
